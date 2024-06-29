@@ -1,0 +1,9 @@
+#container-login {
+  height: 100vh;
+  background: rgb(69, 71, 75);
+  background: linear-gradient(
+    180deg,
+    rgba(69, 71, 75, 1) 0%,
+    rgba(28, 82, 189, 1) 100%
+  );
+}

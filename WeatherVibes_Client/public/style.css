@@ -6,12 +6,11 @@
 body {
   padding: 0px;
   margin: 0px;
-  background: rgb(2, 0, 36);
+  background: rgb(69, 71, 75);
   background: linear-gradient(
-    211deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(21, 43, 112, 1) 100%,
-    rgba(0, 212, 255, 1) 100%
+    180deg,
+    rgba(69, 71, 75, 1) 0%,
+    rgba(28, 82, 189, 1) 100%
   );
 }
 
