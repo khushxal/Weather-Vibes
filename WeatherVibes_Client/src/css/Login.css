@@ -18,9 +18,9 @@ input {
   ); */
   border-radius: 20px;
   background-image: url("login-image.jpg");
-  background-size: cover; /* Adjusts the size of the background image */
-  background-position: center; /* Centers the background image */
-  background-repeat: no-repeat; /* Ensures the image does not repeat */
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 hr {

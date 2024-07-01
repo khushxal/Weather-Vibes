@@ -5,7 +5,7 @@ function Login() {
   return (
     <div id="container-login" className="container p-5 my-2">
       <div className="row">
-        <div className="col-xl-5 col-lg-12 mb-5">
+        <div className="col-xl-5 col-lg-12 mb-5 text-center">
           <p className="fs-1">Weather-Vibes, Welcomes you</p>
           <p className="fs-5">Hope you love the way you surf your vibes 🥰🎧</p>
         </div>

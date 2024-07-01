@@ -11,7 +11,7 @@ function Footer() {
               <a href="https://khushxal.github.io/Khushal/">Khushal Verma</a>
             </span>
           </div>
-          <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <ul className="nav col-md-4 m-1 justify-content-end list-unstyled d-flex">
             <li className="">
               <a className="" href="">
                 <img src="icon-insta.gif" height="50" width="50" />

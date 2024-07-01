@@ -12,8 +12,14 @@ body {
     rgba(69, 71, 75, 1) 0%,
     rgba(28, 82, 189, 1) 100%
   ); */
-  background: linear-gradient(335deg, #071952, #767676);
-  background-size: 400% 400%;
+  /* background: linear-gradient(335deg, #071952, #767676);
+  background-size: 400% 400%; */
+  background: rgb(173, 53, 194);
+  background: linear-gradient(
+    90deg,
+    rgba(173, 53, 194, 1) 0%,
+    rgba(7, 25, 82, 1) 100%
+  );
 
   -webkit-animation: AnimationName 12s ease infinite;
   -moz-animation: AnimationName 12s ease infinite;
@@ -54,11 +60,10 @@ body {
   }
 }
 
-.card {
+.container {
   height: 100vh;
   border-radius: 25px;
-  background-color: beige;
-  margin: 5px auto;
+  margin: 10px auto;
 }
 
 .btn {
