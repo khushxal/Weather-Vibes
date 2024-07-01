@@ -6,12 +6,52 @@
 body {
   padding: 0px;
   margin: 0px;
-  background: rgb(69, 71, 75);
+  /* background: rgb(69, 71, 75);
   background: linear-gradient(
     180deg,
     rgba(69, 71, 75, 1) 0%,
     rgba(28, 82, 189, 1) 100%
-  );
+  ); */
+  background: linear-gradient(335deg, #071952, #767676);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 12s ease infinite;
+  -moz-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
 }
 
 .card {

@@ -1,29 +1,8 @@
-input,
-label,
-p {
-  color: black;
-}
-
-input {
-  border-color: black;
-}
-
-#container-login {
+#container-register {
   height: 100vh;
-  /* background: rgb(69, 71, 75);
-  background: linear-gradient(
-    180deg,
-    rgba(69, 71, 75, 1) 0%,
-    rgba(28, 82, 189, 1) 100%
-  ); */
   border-radius: 20px;
   background-image: url("login-image.jpg");
   background-size: cover; /* Adjusts the size of the background image */
   background-position: center; /* Centers the background image */
   background-repeat: no-repeat; /* Ensures the image does not repeat */
-}
-
-hr {
-  color: black;
-  font-weight: bolder;
 }

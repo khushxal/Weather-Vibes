@@ -13,12 +13,12 @@ function Footer() {
           </div>
           <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li className="">
-              <a className="text-body-secondary" href="">
+              <a className="" href="">
                 <img src="icon-insta.gif" height="50" width="50" />
               </a>
             </li>
             <li className="">
-              <a className="text-body-secondary" href="#" />
+              <a className="" href="#" />
               <img src="icon-twitter.gif" height="50" width="50" />
             </li>
           </ul>
