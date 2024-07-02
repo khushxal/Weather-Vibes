@@ -12,7 +12,7 @@ function Header() {
             src="https://img.icons8.com/3d-fluency/94/cloud.png"
             alt="cloud"
           />
-          <span className="mx-2 fs-2">Weather Vibes</span>
+          <span className="mx-2 fs-2 text-light">Weather Vibes</span>
         </Link>
         <button
           className="navbar-toggler me-2 rounded-5"
