@@ -1,2 +1,11 @@
 #container-client-home {
 }
+
+#search-bar {
+  max-width: 0%;
+  transition: max-width 1s ease-in-out;
+}
+
+#search-bar.show {
+  max-width: 100%;
+}
