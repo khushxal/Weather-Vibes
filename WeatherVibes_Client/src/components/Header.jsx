@@ -4,7 +4,7 @@ import "../css/Header.css";
 function Header() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg mx-auto rounded-5">
+      <nav className="navbar navbar-expand-lg mx-2 mt-1 rounded-5">
         <Link className="navbar-brand mx-2" to={"/"}>
           <img
             width="60"

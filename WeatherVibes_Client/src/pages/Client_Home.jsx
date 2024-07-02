@@ -11,7 +11,7 @@ function client_home() {
 
   return (
     <div id="container-client-home" className="container">
-      <div className="row mb-2">
+      <div className="row mb-2 mx-lg-0 mx-2">
         <div className="col-2 col-lg-1 me-0">
           <button onClick={checkClick} className="btn" id="search-btn">
             <IoSearchCircle></IoSearchCircle>
@@ -36,7 +36,7 @@ function client_home() {
           )}
         </div>
       </div>
-      <div className="row bg-light rounded-3">
+      <div className="row bg-light rounded-3 mx-3 mx-lg-0 p-3">
         <div className="row text-center">
           <div className="col">
             <Link to={"trending"}>Trending</Link>

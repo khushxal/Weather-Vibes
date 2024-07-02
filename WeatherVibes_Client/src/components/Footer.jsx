@@ -3,10 +3,10 @@ import "../css/Footer.css";
 function Footer() {
   return (
     <div>
-      <div className="footer fw-bold rounded-5">
+      <div className="footer fw-bold rounded-5 mb-1">
         <footer className="d-flex flex-wrap justify-content-between align-items-center p-2">
           <div className="col-md-4 d-flex align-items-center">
-            <span className="mb-3 mb-md-0 text-white">
+            <span className="mb-3 mb-lg-0 text-white">
               WeatherVibes Inc © {new Date().getFullYear()} , by {"  "}
               <a href="https://khushxal.github.io/Khushal/">Khushal Verma</a>
             </span>
