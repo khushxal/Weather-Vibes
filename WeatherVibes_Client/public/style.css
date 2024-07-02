@@ -81,3 +81,7 @@ body {
   background-color: black;
   color: white;
 }
+
+#search-btn {
+  font-size: xx-large;
+}
