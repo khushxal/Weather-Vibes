@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaPlayCircle } from "react-icons/fa";
 import axios from "axios";
 function Treding_Layout() {
   const [trending, setTrending] = useState([]);
@@ -21,8 +22,28 @@ function Treding_Layout() {
   return (
     <div className="row">
       {trending.map((trending, index) => (
-        <div className="col-12 col-lg-3 p-1" key={index}>
-          <div className="card">Radhe Radhe</div>
+        <div className="col-12 col-lg-3 py-2" key={index}>
+          <div className="card">
+            <div className="card-img-top">
+              <img
+                src={trending.images[0].url}
+                height={280}
+                width={285}
+                alt="Album image"
+              />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">{trending.name}</h4>
+              <p class="card-text">
+                <a href="https://api.spotify.com/v1/artists/1wRPtKGflJrBx9BmLsSwlU">
+                  {trending.artists[0].name}
+                </a>
+              </p>
+              <a href="#" class="btn">
+                <FaPlayCircle></FaPlayCircle>
+              </a>
+            </div>
+          </div>
         </div>
       ))}
     </div>

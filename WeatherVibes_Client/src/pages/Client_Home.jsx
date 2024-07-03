@@ -36,7 +36,7 @@ function client_home() {
           )}
         </div>
       </div>
-      <div className="row bg-light rounded-3 mx-3 mx-lg-0 p-3">
+      <div className="row rounded-3 mx-3 mx-lg-0 p-3">
         <div className="row text-center">
           <div className="col">
             <Link to={"trending"}>Trending</Link>
@@ -51,8 +51,8 @@ function client_home() {
           </div>
         </div>
         <hr />
-        <div className="row text-center">
-          <div className="col">
+        <div className="row">
+          <div className="col text-center">
             <Outlet></Outlet>
           </div>
         </div>

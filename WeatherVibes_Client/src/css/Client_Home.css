@@ -1,5 +1,5 @@
 #container-client-home {
-  height: 100vh;
+  height: auto;
 }
 
 #search-bar {
@@ -9,11 +9,4 @@
 
 #search-bar.show {
   max-width: 100%;
-}
-
-#card-trending-img {
-  height: 200px;
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
 }
