@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoSearchCircle } from "react-icons/io5";
 import { Link, Outlet } from "react-router-dom";
 import "../css/Client_Home.css";
+
 function client_home() {
   const [isClicked, setIsClicked] = useState(false);
 
