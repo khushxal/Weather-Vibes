@@ -64,6 +64,18 @@ function Header() {
                 SignUp
               </li>
             </Link>
+            <Link className="nav-item" to={"/dashboard"}>
+              <li className="nav-link">
+                <img
+                  width="20"
+                  height="20"
+                  className="me-2"
+                  src="https://img.icons8.com/?size=100&id=mpeojql23sni&format=png&color=000000"
+                  alt="task"
+                />
+                Music
+              </li>
+            </Link>
             <Link className="nav-item" to={"/about"}>
               <li className="nav-link">
                 <img
