@@ -4,6 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 import axios from "axios";
 
 import "../css/Client_Home.css";
+
 function client_home() {
   const [isClicked, setIsClicked] = useState(false);
   const [isSearched, setIsSearched] = useState(false);

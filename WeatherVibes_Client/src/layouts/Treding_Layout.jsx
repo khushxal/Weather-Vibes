@@ -27,7 +27,7 @@ function Treding_Layout() {
             <div className="card-img-top">
               <img
                 src={trending.images[0].url}
-                height={280}
+                height={285}
                 width={285}
                 alt="Album image"
               />
