@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { IoSearchCircle } from "react-icons/io5";
 import { Link, Outlet } from "react-router-dom";
 import axios from "axios";
-
 import "../css/Client_Home.css";
 import { useAuth } from "../store/auth.jsx";
 
