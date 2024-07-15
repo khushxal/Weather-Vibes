@@ -3,14 +3,12 @@ import { IoSearchCircle } from "react-icons/io5";
 import { Link, Outlet } from "react-router-dom";
 import axios from "axios";
 import "../css/Client_Home.css";
-import { useAuth } from "../store/auth.jsx";
 
 function client_home() {
   const [isClicked, setIsClicked] = useState(false);
   const [isSearched, setIsSearched] = useState(false);
   const [searchTitle, setSearchTitle] = useState("");
   const [searchedMusic, setSearchedMusic] = useState([]);
-  const { msg } = useAuth();
 
   function checkClick() {
     setIsClicked(!isClicked);
