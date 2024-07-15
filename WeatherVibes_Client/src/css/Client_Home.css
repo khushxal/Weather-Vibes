@@ -10,3 +10,9 @@
 #search-bar.show {
   max-width: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: black !important;
+  font-weight: normal;
+}

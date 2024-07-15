@@ -4,12 +4,14 @@ import { Link, Outlet } from "react-router-dom";
 import axios from "axios";
 
 import "../css/Client_Home.css";
+import { useAuth } from "../store/auth.jsx";
 
 function client_home() {
   const [isClicked, setIsClicked] = useState(false);
   const [isSearched, setIsSearched] = useState(false);
   const [searchTitle, setSearchTitle] = useState("");
   const [searchedMusic, setSearchedMusic] = useState([]);
+  const { msg } = useAuth();
 
   function checkClick() {
     setIsClicked(!isClicked);
@@ -71,29 +73,27 @@ function client_home() {
           )}
         </div>
       </div>
-      <div className="row rounded-3 mx-3 mx-lg-0 p-3">
-        <div className="row text-center">
+      {msg}
+      <div className="row rounded-3 text-light mx-3 mx-lg-0 p-3">
+        <div className="col-lg-3 selection-menu text-center rounded-3 py-3">
           <div className="col">
             {isSearched ? (
-              <Link to={""}>Search</Link>
+              <Link to={""}> Search</Link>
             ) : (
-              <Link to={"trending"}>Trending</Link>
+              <Link to={""}>Trending</Link>
             )}
           </div>
-          |
+          <hr />
           <div className="col">
             <Link to={"weather"}>Weather</Link>
           </div>
-          |
+          <hr />
           <div className="col">
             <Link to={"favourite"}>Favourite</Link>
           </div>
         </div>
-        <hr />
-        <div className="row">
-          <div className="col text-center">
-            <Outlet></Outlet>
-          </div>
+        <div className="col rounded-3">
+          <Outlet></Outlet>
         </div>
       </div>
     </div>
