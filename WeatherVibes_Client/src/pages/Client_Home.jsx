@@ -71,7 +71,7 @@ function client_home() {
         </div>
       </div>
       <div className="row rounded-3 text-light mx-3 mx-lg-0 p-3">
-        <div className="col-lg-3 selection-menu text-center rounded-3 py-3">
+        <div className="col-lg-3 col-12 selection-menu text-center rounded-3 py-3">
           <div className="col">
             {isSearched ? (
               <Link to={""}> Search</Link>
@@ -88,7 +88,7 @@ function client_home() {
             <Link to={"favourite"}>Favourite</Link>
           </div>
         </div>
-        <div className="col rounded-3">
+        <div className="col-lg-9 col-12 rounded-3">
           <Outlet></Outlet>
         </div>
       </div>
