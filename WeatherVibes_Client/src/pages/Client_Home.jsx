@@ -71,7 +71,10 @@ function client_home() {
         </div>
       </div>
       <div className="row rounded-3 text-light mx-3 mx-lg-0 p-3">
-        <div className="col-lg-3 col-12 selection-menu text-center rounded-3 py-3">
+        <div
+          className="col-lg-3 col-12 text-center rounded-3 py-3"
+          id="sidebar"
+        >
           <div className="col">
             {isSearched ? (
               <Link to={""}> Search</Link>
