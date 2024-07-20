@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useLoc } from "../store/location";
 function Weather_Layout() {
   const [position, setPosition] = useState({ latitude: null, longitude: null });
 
   const [city, setCity] = useState("");
+
+  const { msg } = useLoc();
 
   const API_key = "3dd8ea3a29929af833acb4fb9a8239cf";
 

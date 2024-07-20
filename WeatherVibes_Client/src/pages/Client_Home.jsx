@@ -3,6 +3,7 @@ import { IoSearchCircle } from "react-icons/io5";
 import { Link, Outlet } from "react-router-dom";
 import axios from "axios";
 import "../css/Client_Home.css";
+import { LocationProvider } from "../store/location";
 
 function client_home() {
   const [isClicked, setIsClicked] = useState(false);
@@ -92,7 +93,9 @@ function client_home() {
           </div>
         </div>
         <div className="col-lg-9 col-12 rounded-3">
-          <Outlet></Outlet>
+          <LocationProvider>
+            <Outlet></Outlet>
+          </LocationProvider>
         </div>
       </div>
     </div>
