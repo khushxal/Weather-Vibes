@@ -21,7 +21,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Client_Home />}>
-            <Route path="trending" element={<Trending_Layout />}></Route>
+            <Route path="" element={<Trending_Layout />}></Route>
             <Route path="Weather" element={<Weather_Layout />}></Route>
             <Route path="Favourite" element={<Favourite_Layout />}></Route>
           </Route>

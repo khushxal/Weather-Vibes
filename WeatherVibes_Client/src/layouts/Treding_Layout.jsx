@@ -21,6 +21,7 @@ function Treding_Layout() {
 
   return (
     <div className="row">
+      This is trending page
       {trending.map((trending, index) => (
         <div className="col-12 col-lg-3 py-2" key={index}>
           <div className="card">
