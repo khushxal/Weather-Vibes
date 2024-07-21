@@ -5,11 +5,11 @@ function Treding_Layout() {
   const [trending, setTrending] = useState([]);
   async function getAllTrending() {
     try {
-      const response = await axios.get(
-        "https://v1.nocodeapi.com/khushal1010/spotify/xGXFDJvkPngbgPNP/browse/new"
-      );
-      console.log(response.data.albums.items);
-      setTrending(response.data.albums.items);
+      // const response = await axios.get(
+      //   "https://v1.nocodeapi.com/khushal1010/spotify/xGXFDJvkPngbgPNP/browse/new"
+      // );
+      // console.log(response.data.albums.items);
+      // setTrending(response.data.albums.items);
     } catch (error) {
       console.log(error);
     }

@@ -1,45 +1,6 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
 import { useLoc } from "../store/location";
 function Weather_Layout() {
-  const [position, setPosition] = useState({ latitude: null, longitude: null });
-
-  const [city, setCity] = useState("");
-
-  const { msg } = useLoc();
-
-  const API_key = "3dd8ea3a29929af833acb4fb9a8239cf";
-
-  function getGeolocation() {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        setPosition({
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
-        });
-      });
-    } else {
-      console.log("Geolocation is not available in your browser.");
-    }
-  }
-
-  async function getCity() {
-    try {
-      const data = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/reverse?lat=${position.latitude}&lon=${position.longitude}&limit=2&appid=${API_key}`
-      );
-      setCity(await data.data[0].name);
-      console.log("This is data from getCity", await data.data[0].name);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    getGeolocation();
-    getCity();
-  }, []);
-
+  const { city, weather, temprature } = useLoc();
   return (
     <div className="row">
       <div className="col-12 col-lg-4">
@@ -54,7 +15,9 @@ function Weather_Layout() {
             />
           </div>
           <button className="btn">🔍Search</button>
+          <hr />
         </form>
+        <h3>Curent Weather</h3>
       </div>
       <div className="col-lg-8 fs-3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
