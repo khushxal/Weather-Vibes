@@ -5,7 +5,7 @@ import "../css/Register.css";
 import axios from "axios";
 
 function Register() {
-  const URL = process.env.REACT_APP_SERVER_API + "/api/auth/register";
+  const URL = import.meta.env.REACT_APP_SERVER_API + "/api/auth/register";
 
   console.log(URL);
 
