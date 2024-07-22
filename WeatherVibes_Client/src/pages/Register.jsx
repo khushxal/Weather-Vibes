@@ -28,7 +28,7 @@ function Register() {
     }
   }
 
-  function handleshowpassword(field) {
+  function handleVisibility(field) {
     try {
       setVisibility({ ...visibility, [field]: !visibility[field] });
     } catch (error) {
@@ -90,7 +90,7 @@ function Register() {
                 width={20}
                 className="mx-2"
                 onClick={() => {
-                  handleshowpassword("password");
+                  handleVisibility("password");
                 }}
               />
               <input
@@ -115,7 +115,7 @@ function Register() {
                 width={20}
                 className="mx-2"
                 onClick={() => {
-                  handleshowpassword("confirmPassword");
+                  handleVisibility("confirmPassword");
                 }}
               />
               <input
