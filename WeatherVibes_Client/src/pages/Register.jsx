@@ -79,53 +79,57 @@ function Register() {
             </div>
             <div className="form-group">
               <label htmlFor="exampleFormControlInput1">Password</label>
-              <img
-                src={
-                  visibility.password
-                    ? "https://img.icons8.com/?size=100&id=121540&format=png&color=000000"
-                    : "https://img.icons8.com/?size=100&id=85028&format=png&color=000000"
-                }
-                alt="eye-icon"
-                height={20}
-                width={20}
-                className="mx-2"
-                onClick={() => {
-                  handleVisibility("password");
-                }}
-              />
-              <input
-                type={visibility.password ? "text" : "password"}
-                name="password"
-                className="form-control"
-                id="exampleFormControlInput3"
-                value={user.password}
-                onChange={handleChange}
-              />
+              <div className="input-wrapper">
+                <img
+                  src={
+                    visibility.password
+                      ? "https://img.icons8.com/?size=100&id=121540&format=png&color=000000"
+                      : "https://img.icons8.com/?size=100&id=85028&format=png&color=000000"
+                  }
+                  alt="eye-icon"
+                  height={20}
+                  width={20}
+                  className="eye-icon"
+                  onClick={() => {
+                    handleVisibility("password");
+                  }}
+                />
+                <input
+                  type={visibility.password ? "text" : "password"}
+                  name="password"
+                  className="form-control"
+                  id="exampleFormControlInput3"
+                  value={user.password}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
             <div className="form-group">
               <label htmlFor="exampleFormControlInput1">Confirm Password</label>
-              <img
-                src={
-                  visibility.confirmPassword
-                    ? "https://img.icons8.com/?size=100&id=121540&format=png&color=000000"
-                    : "https://img.icons8.com/?size=100&id=85028&format=png&color=000000"
-                }
-                alt="eye-icon"
-                height={20}
-                width={20}
-                className="mx-2"
-                onClick={() => {
-                  handleVisibility("confirmPassword");
-                }}
-              />
-              <input
-                type={visibility.confirmPassword ? "text" : "password"}
-                name="confirmPassword"
-                className="form-control"
-                id="exampleFormControlInput4"
-                value={user.confirmPassword}
-                onChange={handleChange}
-              />
+              <div className="input-wrapper">
+                <img
+                  src={
+                    visibility.confirmPassword
+                      ? "https://img.icons8.com/?size=100&id=121540&format=png&color=000000"
+                      : "https://img.icons8.com/?size=100&id=85028&format=png&color=000000"
+                  }
+                  alt="eye-icon"
+                  height={20}
+                  width={20}
+                  className="eye-icon"
+                  onClick={() => {
+                    handleVisibility("confirmPassword");
+                  }}
+                />
+                <input
+                  type={visibility.confirmPassword ? "text" : "password"}
+                  name="confirmPassword"
+                  className="form-control"
+                  id="exampleFormControlInput4"
+                  value={user.confirmPassword}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
             <div className="form-group">
               <label htmlFor="exampleFormControlInput1">DoB</label>
