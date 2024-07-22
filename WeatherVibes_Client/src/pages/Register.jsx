@@ -7,8 +7,6 @@ import axios from "axios";
 function Register() {
   const URL = import.meta.env.REACT_APP_SERVER_API + "/api/auth/register";
 
-  console.log(URL);
-
   const userData = {
     email: "",
     name: "",
@@ -46,7 +44,7 @@ function Register() {
       event.preventDefault();
       console.log(user);
       if (user.password === user.confirmPassword) {
-        const response = await axios.post();
+        const response = await axios.post(URL, user);
         setUser(userData);
       } else {
         toast.error("Provided password are not matching");

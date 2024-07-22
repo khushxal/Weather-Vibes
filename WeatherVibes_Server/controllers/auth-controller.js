@@ -1,9 +1,17 @@
 function login(req, res) {
-  res.send("Radhe radhe , this is login page");
+  try {
+    console.log(req.body);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function register(req, res) {
-  res.send("Radhe radhe , this is register page");
+  try {
+    console.log(req.body);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export default { login, register };
