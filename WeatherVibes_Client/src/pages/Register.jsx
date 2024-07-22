@@ -14,10 +14,23 @@ function Register() {
 
   const [user, setUser] = useState(userData);
 
+  const [visibility, setVisibility] = useState({
+    password: false,
+    confirmPassword: false,
+  });
+
   function handleChange(event) {
     try {
       const { name, value } = event.target;
       setUser({ ...user, [name]: value });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  function handleshowpassword(field) {
+    try {
+      setVisibility({ ...visibility, [field]: !visibility[field] });
     } catch (error) {
       console.log(error);
     }
@@ -30,7 +43,7 @@ function Register() {
       if (user.password === user.confirmPassword) {
         setUser(userData);
       } else {
-        toast.error("Please type matching password");
+        toast.error("Provided password are not matching");
       }
     } catch (error) {
       console.log(error);
@@ -66,8 +79,22 @@ function Register() {
             </div>
             <div className="form-group">
               <label htmlFor="exampleFormControlInput1">Password</label>
+              <img
+                src={
+                  visibility.password
+                    ? "https://img.icons8.com/?size=100&id=121540&format=png&color=000000"
+                    : "https://img.icons8.com/?size=100&id=85028&format=png&color=000000"
+                }
+                alt="eye-icon"
+                height={20}
+                width={20}
+                className="mx-2"
+                onClick={() => {
+                  handleshowpassword("password");
+                }}
+              />
               <input
-                type="password"
+                type={visibility.password ? "text" : "password"}
                 name="password"
                 className="form-control"
                 id="exampleFormControlInput3"
@@ -77,8 +104,22 @@ function Register() {
             </div>
             <div className="form-group">
               <label htmlFor="exampleFormControlInput1">Confirm Password</label>
+              <img
+                src={
+                  visibility.confirmPassword
+                    ? "https://img.icons8.com/?size=100&id=121540&format=png&color=000000"
+                    : "https://img.icons8.com/?size=100&id=85028&format=png&color=000000"
+                }
+                alt="eye-icon"
+                height={20}
+                width={20}
+                className="mx-2"
+                onClick={() => {
+                  handleshowpassword("confirmPassword");
+                }}
+              />
               <input
-                type="password"
+                type={visibility.confirmPassword ? "text" : "password"}
                 name="confirmPassword"
                 className="form-control"
                 id="exampleFormControlInput4"
