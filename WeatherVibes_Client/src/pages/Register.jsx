@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "../css/Register.css";
+import axios from "axios";
 
 function Register() {
+  const URL = process.env.REACT_APP_SERVER_API + "/api/auth/register";
+
+  console.log(URL);
+
   const userData = {
     email: "",
     name: "",
@@ -36,11 +41,12 @@ function Register() {
     }
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     try {
       event.preventDefault();
       console.log(user);
       if (user.password === user.confirmPassword) {
+        const response = await axios.post();
         setUser(userData);
       } else {
         toast.error("Provided password are not matching");
