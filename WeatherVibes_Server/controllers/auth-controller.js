@@ -1,6 +1,7 @@
 function login(req, res) {
   try {
     console.log(req.body);
+    res.json("Data is found");
   } catch (error) {
     console.log(error);
   }
@@ -9,6 +10,7 @@ function login(req, res) {
 function register(req, res) {
   try {
     console.log(req.body);
+    res.json("Data is found");
   } catch (error) {
     console.log(error);
   }

@@ -40,18 +40,19 @@ function Register() {
   }
 
   async function handleSubmit(event) {
+    event.preventDefault();
     try {
-      event.preventDefault();
-      console.log(user);
-      if (user.password === user.confirmPassword) {
+      if (user.password == user.confirmPassword) {
         const response = await axios.post(URL, user);
-        setUser(userData);
+        console.log(response);
+        toast.success("Registered Successfully, redirecting 🔃");
       } else {
         toast.error("Provided password are not matching");
       }
     } catch (error) {
       console.log(error);
     }
+    setUser(userData);
   }
 
   return (
