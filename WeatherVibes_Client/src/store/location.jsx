@@ -18,6 +18,10 @@ export function LocationProvider({ children }) {
 
   const [isPositionSet, setIsPositionSet] = useState(false);
 
+  let [flag, setFlag] = useState(
+    localStorage.getItem("flag") ? localStorage.getItem("flag") : 0
+  );
+
   function getGeolocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
@@ -37,16 +41,26 @@ export function LocationProvider({ children }) {
 
   async function getCity() {
     try {
-      console.log("API Called");
-      const data = await axios.get(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${localStorage.getItem(
-          "lat"
-        )}&lon=${localStorage.getItem("long")}&appid=${API_key}`
-      );
-      localStorage.setItem("city", await data.data.name);
-      setWeather(await data.data.weather[0].main);
-      setCity(await data.data.name);
-      setTemprature(await data.data.main.temp);
+      if (flag === 0) {
+        console.log("API Called");
+        const data = await axios.get(
+          `http://api.openweathermap.org/data/2.5/weather?lat=${localStorage.getItem(
+            "lat"
+          )}&lon=${localStorage.getItem("long")}&appid=${API_key}`
+        );
+        console.log(data);
+        localStorage.setItem("city", await data.data.name);
+        localStorage.setItem("weather", await data.data.weather[0].main);
+        localStorage.setItem("temprature", await data.data.main.temp);
+        setFlag(flag++);
+        localStorage.setItem("flag", flag);
+        setWeather(await data.data.weather[0].main);
+        setCity(await data.data.name);
+        setTemprature(await data.data.main.temp);
+      }
+      setWeather(localStorage.getItem("weather"));
+      setCity(localStorage.getItem("city"));
+      setTemprature(localStorage.getItem("temprature"));
     } catch (error) {
       console.log(error);
     }

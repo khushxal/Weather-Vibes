@@ -44,8 +44,11 @@ function Register() {
     try {
       if (user.password == user.confirmPassword) {
         const response = await axios.post(URL, user);
-        console.log(response);
-        toast.success("Registered Successfully, redirecting 🔃");
+        if (response.status === 201) {
+          toast.success(response.data.msg);
+        } else {
+          toast.error(response.data.msg);
+        }
       } else {
         toast.error("Provided password are not matching");
       }
@@ -72,7 +75,7 @@ function Register() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">Full Name</label>
+              <label htmlFor="exampleFormControlInput2">Full Name</label>
               <input
                 type="text"
                 name="name"
@@ -83,7 +86,7 @@ function Register() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">Password</label>
+              <label htmlFor="exampleFormControlInput3">Password</label>
               <div className="input-wrapper">
                 <img
                   src={
@@ -110,7 +113,7 @@ function Register() {
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">Confirm Password</label>
+              <label htmlFor="exampleFormControlInput4">Confirm Password</label>
               <div className="input-wrapper">
                 <img
                   src={
@@ -137,7 +140,7 @@ function Register() {
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">DoB</label>
+              <label htmlFor="exampleFormControlInput5">DoB</label>
               <input
                 type="date"
                 name="dob"
@@ -151,7 +154,7 @@ function Register() {
               <button className="btn text-white">Get Started</button>
               <hr />
               <p>
-                Not having account ? <Link to="/register">Sign Up</Link>
+                Not having account ? <Link to="/login">Sign in</Link>
               </p>
               <p className="fs">Terms and Conditions</p>
             </div>
