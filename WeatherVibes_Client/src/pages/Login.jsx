@@ -3,8 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import "../css/Login.css";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useAuth } from "../store/auth";
 function Login() {
   const navigate = useNavigate();
+
+  const { storeToken } = useAuth();
 
   const URL = import.meta.env.REACT_APP_SERVER_API + "/api/auth/login";
 
@@ -42,6 +45,8 @@ function Login() {
       const response = await axios.post(URL, user);
       toast.success(response.data.msg);
       if (response.status === 200) {
+        storeToken(response.data.token);
+        console.log(response.data);
         navigate("/dashboard/");
       }
     } catch (error) {

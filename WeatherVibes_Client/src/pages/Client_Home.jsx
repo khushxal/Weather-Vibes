@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoSearchCircle } from "react-icons/io5";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../css/Client_Home.css";
 import { LocationProvider } from "../store/location";
+import { useAuth } from "../store/auth";
 
 function client_home() {
+  const { LoggedIn } = useAuth();
+  const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState(false);
   const [isSearched, setIsSearched] = useState(false);
   const [searchTitle, setSearchTitle] = useState("");
@@ -36,6 +39,12 @@ function client_home() {
       console.log(error);
     }
   }
+
+  useEffect(function () {
+    if (!LoggedIn) {
+      navigate("/logout");
+    }
+  }, []);
 
   return (
     <div id="container-client-home" className="container">

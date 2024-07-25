@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "../css/Register.css";
 import axios from "axios";
+import { useAuth } from "../store/auth";
 
 function Register() {
+  const { storeToken } = useAuth();
+
+  const navigate = useNavigate();
+
   const URL = import.meta.env.REACT_APP_SERVER_API + "/api/auth/register";
 
   const userData = {
@@ -46,6 +51,8 @@ function Register() {
         const response = await axios.post(URL, user);
         if (response.status === 201) {
           toast.success(response.data.msg);
+          storeToken(response.data.token);
+          navigate("/login");
         } else {
           toast.error(response.data.msg);
         }

@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
+import { useAuth } from "../store/auth";
 function Header() {
+  const { LoggedIn } = useAuth();
   return (
     <div>
       <nav className="navbar navbar-expand-lg mx-2 mt-1 rounded-5">
@@ -40,42 +42,48 @@ function Header() {
                 Home
               </li>
             </Link>
-            <Link className="nav-item" to={"/login"}>
-              <li className="nav-link">
-                <img
-                  width="20"
-                  height="20"
-                  className="me-2"
-                  src="https://img.icons8.com/deco/48/enter-2.png"
-                  alt="enter-2"
-                />
-                Login
-              </li>
-            </Link>
-            <Link className="nav-item" to={"/register"}>
-              <li className="nav-link">
-                <img
-                  width="20"
-                  height="20"
-                  className="me-2"
-                  src="https://img.icons8.com/deco/48/task.png"
-                  alt="task"
-                />
-                SignUp
-              </li>
-            </Link>
-            <Link className="nav-item" to={"/dashboard"}>
-              <li className="nav-link">
-                <img
-                  width="20"
-                  height="20"
-                  className="me-2"
-                  src="https://img.icons8.com/?size=100&id=mpeojql23sni&format=png&color=000000"
-                  alt="task"
-                />
-                Music
-              </li>
-            </Link>
+            {LoggedIn ? (
+              <Link className="nav-item" to={"/dashboard"}>
+                <li className="nav-link">
+                  <img
+                    width="20"
+                    height="20"
+                    className="me-2"
+                    src="https://img.icons8.com/?size=100&id=mpeojql23sni&format=png&color=000000"
+                    alt="task"
+                  />
+                  Music
+                </li>
+              </Link>
+            ) : (
+              <>
+                <Link className="nav-item" to={"/login"}>
+                  <li className="nav-link">
+                    <img
+                      width="20"
+                      height="20"
+                      className="me-2"
+                      src="https://img.icons8.com/deco/48/enter-2.png"
+                      alt="enter-2"
+                    />
+                    Login
+                  </li>
+                </Link>
+                <Link className="nav-item" to={"/register"}>
+                  <li className="nav-link">
+                    <img
+                      width="20"
+                      height="20"
+                      className="me-2"
+                      src="https://img.icons8.com/deco/48/task.png"
+                      alt="task"
+                    />
+                    SignUp
+                  </li>
+                </Link>
+              </>
+            )}
+
             <Link className="nav-item" to={"/about"}>
               <li className="nav-link">
                 <img
