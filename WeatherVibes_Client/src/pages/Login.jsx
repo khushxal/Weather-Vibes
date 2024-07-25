@@ -45,8 +45,7 @@ function Login() {
       const response = await axios.post(URL, user);
       toast.success(response.data.msg);
       if (response.status === 200) {
-        storeToken(response.data.token);
-        console.log(response.data);
+        storeToken(await response.data.token);
         navigate("/dashboard/");
       }
     } catch (error) {

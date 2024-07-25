@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
+import { toast } from "react-toastify";
 
 function Logout() {
   const navigate = useNavigate();
@@ -9,6 +10,7 @@ function Logout() {
 
   useEffect(function () {
     deleteToken();
+    toast.success("Logged Out");
     navigate("/login");
   }, []);
 

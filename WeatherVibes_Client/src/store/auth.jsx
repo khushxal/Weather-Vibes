@@ -30,10 +30,6 @@ export function AuthProvider({ children }) {
   async function isUserAuthorized() {
     try {
       setIsLoading(true);
-      console.log("IsUserAuthorized run");
-      console.log(token);
-      console.log(LoggedIn);
-      console.log(user);
       const response = await axios.get(URL, {
         headers: { Authorization: `Bearer ${token}` },
       });

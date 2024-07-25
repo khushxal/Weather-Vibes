@@ -13,7 +13,7 @@ function Landing() {
         </h1>
         <p className="col-md-8 fs-4"></p>
         <Link to={"/login"}>
-          <button class="btn btn-outline-dark btn-lg">Get Ready</button>
+          <button className="btn btn-outline-dark btn-lg">Get Ready</button>
         </Link>
       </div>
     </div>

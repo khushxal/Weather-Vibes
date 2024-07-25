@@ -96,18 +96,20 @@ function Header() {
                 About Us
               </li>
             </Link>
-            <Link className="nav-item" to={"/logout"}>
-              <li className="nav-link">
-                <img
-                  width="20"
-                  height="20"
-                  className="me-2"
-                  src="https://img.icons8.com/deco/48/info.png"
-                  alt="task"
-                />
-                Logout
-              </li>
-            </Link>
+            {LoggedIn && (
+              <Link className="nav-item" to={"/logout"}>
+                <li className="nav-link">
+                  <img
+                    width="20"
+                    height="20"
+                    className="me-2"
+                    src="https://img.icons8.com/deco/48/info.png"
+                    alt="task"
+                  />
+                  Logout
+                </li>
+              </Link>
+            )}
           </ul>
         </div>
       </nav>

@@ -10,6 +10,7 @@ import Favourite_Layout from "./layouts/Favourite_Layout";
 import Trending_Layout from "./layouts/Treding_Layout";
 import Weather_Layout from "./layouts/Weather_Layout";
 import Logout from "./pages/Logout";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="Weather" element={<Weather_Layout />}></Route>
             <Route path="Favourite" element={<Favourite_Layout />}></Route>
           </Route>
+          <Route path="/profile" element={<Profile />} />
           <Route path="/logout" element={<Logout />} />
         </Routes>
         <Footer></Footer>
