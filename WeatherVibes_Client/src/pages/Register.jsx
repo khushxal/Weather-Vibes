@@ -27,18 +27,18 @@ function Register() {
     confirmPassword: false,
   });
 
-  function handleChange(event) {
+  function handleVisibility(field) {
     try {
-      const { name, value } = event.target;
-      setUser({ ...user, [name]: value });
+      setVisibility({ ...visibility, [field]: !visibility[field] });
     } catch (error) {
       console.log(error);
     }
   }
 
-  function handleVisibility(field) {
+  function handleChange(event) {
     try {
-      setVisibility({ ...visibility, [field]: !visibility[field] });
+      const { name, value } = event.target;
+      setUser({ ...user, [name]: value });
     } catch (error) {
       console.log(error);
     }
