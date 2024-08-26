@@ -8,7 +8,7 @@ function Footer() {
           <div className="col-md-4 d-flex align-items-center">
             <span className="mb-3 mb-lg-0 text-white">
               WeatherVibes Inc © {new Date().getFullYear()} , by {"  "}
-              <a href="https://khushxal.github.io/Khushal/">Khushal Verma</a>
+              <a href="https://khushalverma.netlify.app/">Khushal Verma</a>
             </span>
           </div>
           <ul className="nav col-md-4 m-1 justify-content-end list-unstyled d-flex">
