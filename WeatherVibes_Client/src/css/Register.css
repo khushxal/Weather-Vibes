@@ -1,7 +1,15 @@
 #container-register {
-  height: 100vh;
+  /* height: 100vh; */
   border-radius: 20px;
-  background-image: url("login-image.jpg");
+  /* background-image: url("login-image.jpg"); */
+  background: rgb(255, 255, 255);
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 219, 0, 0.9) 50%,
+    rgba(0, 212, 255, 0.9) 100%
+  );
   background-size: cover; /* Adjusts the size of the background image */
   background-position: center; /* Centers the background image */
   background-repeat: no-repeat; /* Ensures the image does not repeat */

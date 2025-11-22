@@ -26,7 +26,7 @@ function App() {
             <Route path="Favourite" element={<Favourite_Layout />}></Route>
           </Route>
         </Routes>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </BrowserRouter>
     </>
   );

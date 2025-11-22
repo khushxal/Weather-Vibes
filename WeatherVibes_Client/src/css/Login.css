@@ -9,7 +9,7 @@ input {
 }
 
 #container-login {
-  height: 100vh;
+  /* height: 100vh; */
   /* background: rgb(69, 71, 75);
   background: linear-gradient(
     180deg,
@@ -17,10 +17,23 @@ input {
     rgba(28, 82, 189, 1) 100%
   ); */
   border-radius: 20px;
-  background-image: url("login-image.jpg");
+  /* background-image: url("login-image.jpg"); */
+  background: rgb(255, 255, 255);
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 219, 0, 0.9) 50%,
+    rgba(0, 212, 255, 0.9) 100%
+  );
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  min-height: 100%;
 }
 
 hr {
