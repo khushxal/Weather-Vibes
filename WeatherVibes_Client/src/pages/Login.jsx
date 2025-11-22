@@ -104,7 +104,6 @@ function Login() {
             </div>
             <div className="text-center mt-2">
               <button className="btn">Login</button>
-              <hr />
               <p>
                 Not having account ? <Link to="/register">Sign Up</Link>
               </p>
