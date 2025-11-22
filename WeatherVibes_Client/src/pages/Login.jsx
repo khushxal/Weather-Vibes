@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-=======
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
->>>>>>> f6a9e64430d98839f77a2d984e2b0e3fadc84cb5
 import "../css/Login.css";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -66,17 +61,10 @@ function Login() {
             Hope you love the way you surf your vibes 🥰🎧
           </div>
         </div>
-<<<<<<< HEAD
         <div className="text-center">
           <form className="m-1 p-1 fs-5">
             <div class="form-group">
               <label for="exampleFormControlInput1">Email address</label>
-=======
-        <div className="col-xl-7 col-sm-12">
-          <form onSubmit={handleSubmit} className="m-1 p-1 fs-5">
-            <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">Email address</label>
->>>>>>> f6a9e64430d98839f77a2d984e2b0e3fadc84cb5
               <input
                 type="email"
                 name="email"
