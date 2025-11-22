@@ -28,3 +28,19 @@
   border-color: black;
   box-shadow: 0 0 5px rgb(0, 0, 0);
 }
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-control {
+  padding-right: 30px; /* Make space for the eye icon */
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust this value to position the icon within the input */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
