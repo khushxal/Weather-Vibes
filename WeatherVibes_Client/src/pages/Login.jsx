@@ -54,18 +54,18 @@ function Login() {
   }
 
   return (
-    <div id="container-login" className="container">
-      <div className="row">
+    <div className="h-100vh box-shadow d-flex align-items-center justify-content-center">
+      <div>
         <div className="text-center">
           <div className="fs-1">Weather-Vibes, Welcomes you</div>
           <div className="fs-5">
             Hope you love the way you surf your vibes 🥰🎧
           </div>
         </div>
-        <div className="text-center">
+        <div className="">
           <form className="m-1 p-1 fs-5">
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Email address</label>
+            <div className="form-group">
+              <label htmlFor="exampleFormControlInput1">Email address</label>
               <input
                 type="email"
                 name="email"
