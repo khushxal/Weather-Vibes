@@ -54,62 +54,64 @@ function Login() {
   }
 
   return (
-    <div className="h-100vh box-shadow d-flex align-items-center justify-content-center">
-      <div>
-        <div className="text-center">
-          <div className="fs-1">Weather-Vibes, Welcomes you</div>
-          <div className="fs-5">
-            Hope you love the way you surf your vibes 🥰🎧
-          </div>
-        </div>
-        <div className="">
-          <form className="m-1 p-1 fs-5">
-            <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">Email address</label>
-              <input
-                type="email"
-                name="email"
-                className="form-control"
-                id="exampleFormControlInput1"
-                value={user.email}
-                onChange={handleChange}
-              />
+    <div className="h100vh d-flex align-items-center justify-content-center container">
+      <div className="box-shadow h-75 w-75 d-flex justify-content-center align-items-center">
+        <div>
+          <div className="text-center">
+            <div className="fs-1">Weather-Vibes, Welcomes you</div>
+            <div className="fs-5">
+              Hope you love the way you surf your vibes 🥰🎧
             </div>
-            <div className="form-group">
-              <label htmlFor="exampleFormControlInput2">Password</label>
-              <div className="input-wrapper">
-                <img
-                  src={
-                    visibility.password
-                      ? "https://img.icons8.com/?size=100&id=121540&format=png&color=000000"
-                      : "https://img.icons8.com/?size=100&id=85028&format=png&color=000000"
-                  }
-                  alt="eye-icon"
-                  height={20}
-                  width={20}
-                  className="eye-icon"
-                  onClick={() => {
-                    handleVisibility("password");
-                  }}
-                />
+          </div>
+          <div className="">
+            <form className="m-1 p-1 fs-5">
+              <div className="form-group">
+                <label htmlFor="exampleFormControlInput1">Email address</label>
                 <input
-                  type={visibility.password ? "text" : "password"}
-                  name="password"
+                  type="email"
+                  name="email"
                   className="form-control"
-                  id="exampleFormControlInput2"
-                  value={user.password}
+                  id="exampleFormControlInput1"
+                  value={user.email}
                   onChange={handleChange}
                 />
               </div>
-            </div>
-            <div className="text-center mt-2">
-              <button className="btn">Login</button>
-              <p>
-                Not having account ? <Link to="/register">Sign Up</Link>
-              </p>
-              <p className="fs">Terms and Conditions</p>
-            </div>
-          </form>
+              <div className="form-group">
+                <label htmlFor="exampleFormControlInput2">Password</label>
+                <div className="input-wrapper">
+                  <img
+                    src={
+                      visibility.password
+                        ? "https://img.icons8.com/?size=100&id=121540&format=png&color=000000"
+                        : "https://img.icons8.com/?size=100&id=85028&format=png&color=000000"
+                    }
+                    alt="eye-icon"
+                    height={20}
+                    width={20}
+                    className="eye-icon"
+                    onClick={() => {
+                      handleVisibility("password");
+                    }}
+                  />
+                  <input
+                    type={visibility.password ? "text" : "password"}
+                    name="password"
+                    className="form-control"
+                    id="exampleFormControlInput2"
+                    value={user.password}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+              <div className="text-center ">
+                <button className="btn">Login</button>
+                <p>
+                  Not having account ? <Link to="/register">Sign Up</Link>
+                </p>
+                <p className="fs">Terms and Conditions</p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
