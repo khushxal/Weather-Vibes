@@ -55,16 +55,25 @@ function Login() {
 
   return (
     <div className="h100vh d-flex align-items-center justify-content-center container">
-      <div className="box-shadow h-75 w-75 d-flex justify-content-center align-items-center">
+      <div className="shadow d-flex justify-content-center align-items-center">
         <div>
-          <div className="text-center">
-            <div className="fs-1">Weather-Vibes, Welcomes you</div>
-            <div className="fs-5">
+          <img
+            src="./login-card-side-img.png"
+            height={500}
+            width={500}
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div className="mx-2">
+          <div className="d-flex flex-column align-items-center justify-content-center">
+            <div className="mb-2 fs-2">Weather-Vibes, Welcomes you</div>
+            <div className="mb-3">
               Hope you love the way you surf your vibes 🥰🎧
             </div>
           </div>
           <div className="">
-            <form className="m-1 p-1 fs-5">
+            <form className="m-1 p-1">
               <div className="form-group">
                 <label htmlFor="exampleFormControlInput1">Email address</label>
                 <input
@@ -105,12 +114,14 @@ function Login() {
               </div>
               <div className="text-center ">
                 <button className="btn">Login</button>
-                <p>
-                  Not having account ? <Link to="/register">Sign Up</Link>
-                </p>
-                <p className="fs">Terms and Conditions</p>
               </div>
             </form>
+          </div>
+          <div className="d-flex align-items-center justify-content-center gap-2">
+            <div style={{ fontSize: "14px" }}>
+              Not having account ? <Link to="/register">Sign Up</Link>
+            </div>
+            |<div style={{ fontSize: "14px" }}>Terms and Conditions</div>
           </div>
         </div>
       </div>

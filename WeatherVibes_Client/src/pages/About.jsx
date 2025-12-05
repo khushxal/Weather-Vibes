@@ -1,18 +1,22 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "../css/About.css";
 
 function About() {
   return (
-    <div id="container-about" className="container rounded-5">
-      <div className="row p-lg-5">
+    <div className="h100vh d-flex align-items-center justify-content-center container">
+      <div className="d-flex align-items-center p-lg-5 shadow">
         <div className="col-12 col-lg-6 text-lg-center">
-          <img src="img-about.png" alt="This is about" width={400} />
+          <img
+            src="img-about.png"
+            alt="This is about"
+            width={400}
+            height={400}
+          />
         </div>
         <div className="col-12 col-lg-6">
           <p className="fs-1 p-2 p-lg-0">About Us</p>
           <hr />
-          <div className="row pb-5">
+          <div className="d-flex align-items-center pb-5">
             <div className="col-12 text-center text-lg-start">
               <div className="fs-5 text-dark ">
                 Glad you visited here. Hope you had created an account and used
